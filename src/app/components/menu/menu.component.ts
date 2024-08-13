@@ -25,9 +25,13 @@ export class MenuComponent implements OnInit {
     return this.cartService.getSumPrice();
   }
 
-  onClick(){
-    this.show = !this.show
-    console.log('click ',this.show)
+  openModal() {
+    (window as any).$(`#myModal`).modal('show');
   }
+
+  closeModal() {
+    (window as any).$(`#myModal`).modal('hide');
+  }
+
 
 }
